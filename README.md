@@ -15,7 +15,8 @@ See http://jsoup.org/ for downloads and documentation.
 Import this as a Maven project in IntelliJ. 
 Add a JAR artifact for this project using [these
 instructions](https://stackoverflow.com/questions/1082580/how-to-build-jars-from-intellij-properly).
-Then build the JAR artifact.
+Then build the JAR artifact.  You should be using JDK 1.6 to compile the
+JAR.  I tried building it with JDK 1.8, and it failed.
 
 ## Test that it works with Java 1.4
 
