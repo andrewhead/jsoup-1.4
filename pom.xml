@@ -38,7 +38,7 @@
         <version>2.0.2</version>
         <configuration>
           <source>1.5</source>
-          <target>1.5</target>
+          <target>jsr14</target>
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>

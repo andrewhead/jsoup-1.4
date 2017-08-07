@@ -4,6 +4,7 @@ import org.apache.commons.lang.Validate;
 import org.jsoup.nodes.*;
 import org.jsoup.parser.Tag;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -104,7 +105,8 @@ public class Cleaner {
         int numDiscarded = 0;
 
         Attributes sourceAttrs = sourceEl.attributes();
-        for (Attribute sourceAttr : sourceAttrs) {
+        for (Iterator i = sourceAttrs.iterator(); i.hasNext();) {
+            Attribute sourceAttr = (Attribute) i.next();
             if (whitelist.isSafeAttribute(sourceTag, sourceEl, sourceAttr))
                 destAttrs.put(sourceAttr);
             else

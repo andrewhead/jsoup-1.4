@@ -6,6 +6,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.parser.TokenQueue;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 
 /**
@@ -84,7 +85,8 @@ public class Selector {
         Validate.notNull(roots);
         LinkedHashSet<Element> elements = new LinkedHashSet<Element>();
 
-        for (Element root : roots) {
+        for (Iterator i = roots.iterator(); i.hasNext();) {
+            Element root = (Element) i.next();
             elements.addAll(select(query, root));
         }
         return new Elements(elements);

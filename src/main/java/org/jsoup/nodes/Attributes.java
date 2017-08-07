@@ -107,7 +107,8 @@ public class Attributes implements Iterable<Attribute> {
      */
     public String html() {
         StringBuilder accum = new StringBuilder();
-        for (Attribute attribute : this) {
+        for (Iterator i = this.iterator(); i.hasNext();) {
+            Attribute attribute = (Attribute) i.next();
             accum.append(" ");
             accum.append(attribute.html());
         }
