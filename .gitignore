@@ -8,3 +8,7 @@ target/
 .settings/
 *Thrash*
 
+# Andrew's additions
+out
+.*.sw*
+*.class
